@@ -47,3 +47,7 @@ C:\aws_with_terraform_learning\Day-04\file-provisioners\.terraform.lock.hcl
 
 C:\aws_with_terraform_learning\Day-05\workspaces\.terraform.lock.hcl
 C:\aws_with_terraform_learning\Day-05\workspaces\.terraform
+
+C:\aws_with_terraform_learning\Day-06\environments\Storage\S3\dev\.terraform.lock.hcl
+C:\aws_with_terraform_learning\Day-06\environments\Storage\S3\dev\.terraform
+Day-06/environments/Storage/S3/dev/.terraform.lock.hcl
