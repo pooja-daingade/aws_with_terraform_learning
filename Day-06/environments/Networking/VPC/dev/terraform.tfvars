@@ -5,5 +5,13 @@
   enable_dns_support = true
   public_subnet_01_availability_zone = "ap-south-1a"
   public_subnet_01_cidr = "10.0.1.0/24"
+  public_subnet_02_availability_zone = "ap-south-1a"
+  public_subnet_02_cidr = "10.0.2.0/24"
+  public_subnet_03_availability_zone = "ap-south-1a"
+  public_subnet_03_cidr = "10.0.3.0/24"
   private_subnet_01_cidr = "10.0.11.0/24"
   private_subnet_01_availability_zone = "ap-south-1b"
+  private_subnet_02_cidr = "10.0.12.0/24"
+  private_subnet_02_availability_zone = "ap-south-1b"
+  private_subnet_03_cidr = "10.0.13.0/24"
+  private_subnet_03_availability_zone = "ap-south-1b"

@@ -7,6 +7,14 @@ module "vpc_module" {
   enable_dns_support = var.enable_dns_support
   public_subnet_01_availability_zone = var.public_subnet_01_availability_zone
   public_subnet_01_cidr = var.public_subnet_01_cidr
+  public_subnet_02_availability_zone = var.public_subnet_02_availability_zone
+  public_subnet_02_cidr = var.public_subnet_02_cidr
+  public_subnet_03_availability_zone = var.public_subnet_03_availability_zone
+  public_subnet_03_cidr = var.public_subnet_03_cidr
   private_subnet_01_cidr = var.private_subnet_01_cidr
   private_subnet_01_availability_zone = var.private_subnet_01_availability_zone
+  private_subnet_02_cidr = var.private_subnet_02_cidr
+  private_subnet_02_availability_zone = var.private_subnet_02_availability_zone
+  private_subnet_03_cidr = var.private_subnet_03_cidr
+  private_subnet_03_availability_zone = var.private_subnet_03_availability_zone
 }
