@@ -19,6 +19,7 @@ resource "aws_subnet" "public_subnet_01" {
   }
 }
 
+
 resource "aws_subnet" "public_subnet_02" {
   vpc_id     = aws_vpc.main.id
   cidr_block = var.public_subnet_02_cidr
@@ -29,6 +30,7 @@ resource "aws_subnet" "public_subnet_02" {
     Name = "${var.public_subnet_02_availability_zone}-public_subnet_02"
   }
 }
+
 
 resource "aws_subnet" "public_subnet_03" {
   vpc_id     = aws_vpc.main.id
@@ -41,6 +43,7 @@ resource "aws_subnet" "public_subnet_03" {
   }
 }
 
+
 resource "aws_subnet" "private_subnet_01" {
   vpc_id     = aws_vpc.main.id
   cidr_block = var.private_subnet_01_cidr
@@ -52,6 +55,7 @@ resource "aws_subnet" "private_subnet_01" {
   }
 }
 
+
 resource "aws_subnet" "private_subnet_02" {
   vpc_id     = aws_vpc.main.id
   cidr_block = var.private_subnet_02_cidr
@@ -62,6 +66,7 @@ resource "aws_subnet" "private_subnet_02" {
     Name = "${var.private_subnet_02_availability_zone}-private_subnet_02"
   }
 }
+
 
 resource "aws_subnet" "private_subnet_03" {
   vpc_id     = aws_vpc.main.id
@@ -83,6 +88,7 @@ resource "aws_internet_gateway" "fct_igw" {
   }
 }
 
+
 resource "aws_route_table" "public_rt" {
   vpc_id = aws_vpc.main.id
 
@@ -96,15 +102,18 @@ resource "aws_route_table" "public_rt" {
   }
 }
 
+
 resource "aws_route_table_association" "public_subnet_asso" {
   subnet_id      = aws_subnet.public_subnet_01.id
   route_table_id = aws_route_table.public_rt.id
 }
 
+
 resource "aws_route_table_association" "public_subnet_asso_02" {
   subnet_id      = aws_subnet.public_subnet_02.id
   route_table_id = aws_route_table.public_rt.id
 }
+
 
 resource "aws_route_table_association" "public_subnet_asso_03" {
   subnet_id      = aws_subnet.public_subnet_03.id
@@ -117,7 +126,7 @@ resource "aws_route_table" "private_rt" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.fct_igw.id
+    nat_gateway_id = aws_nat_gateway.fct_nat.id
   }
 
   tags = {
@@ -125,17 +134,43 @@ resource "aws_route_table" "private_rt" {
   }
 }
 
+
 resource "aws_route_table_association" "private_subnet_asso_01" {
   subnet_id      = aws_subnet.private_subnet_01.id
   route_table_id = aws_route_table.private_rt.id
 }
+
 
 resource "aws_route_table_association" "private_subnet_asso_02" {
   subnet_id      = aws_subnet.private_subnet_02.id
   route_table_id = aws_route_table.private_rt.id
 }
 
+
 resource "aws_route_table_association" "private_subnet_asso_03" {
   subnet_id      = aws_subnet.private_subnet_03.id
   route_table_id = aws_route_table.private_rt.id
 }
+
+
+resource "aws_eip" "nat_01_eip" {
+  domain   = "vpc"
+  tags = {
+    Name = var.eip_name
+  }
+}
+
+
+resource "aws_nat_gateway" "fct_nat" {
+  allocation_id = aws_eip.nat_01_eip.id
+  subnet_id     = aws_subnet.public_subnet_01.id
+
+  tags = {
+    Name = "${var.environment}-nat"
+  }
+
+  # To ensure proper ordering, it is recommended to add an explicit dependency
+  # on the Internet Gateway for the VPC.
+  depends_on = [aws_internet_gateway.fct_igw]
+}
+

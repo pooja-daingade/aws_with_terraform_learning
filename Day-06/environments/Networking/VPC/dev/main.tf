@@ -17,4 +17,5 @@ module "vpc_module" {
   private_subnet_02_availability_zone = var.private_subnet_02_availability_zone
   private_subnet_03_cidr = var.private_subnet_03_cidr
   private_subnet_03_availability_zone = var.private_subnet_03_availability_zone
+  eip_name = var.eip_name
 }
