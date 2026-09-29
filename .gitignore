@@ -54,3 +54,6 @@ Day-06/environments/Storage/S3/dev/.terraform.lock.hcl
 C:\aws_with_terraform_learning\Day-06\environments\Networking\VPC\dev\.terraform\*
 C:\aws_with_terraform_learning\Day-06\environments\Networking\VPC\dev\.terraform.lock.hcl
 C:\aws_with_terraform_learning\Day-06\environments\Networking\VPC\dev\.terraform\terraform.tfstate
+C:\aws_with_terraform_learning\Day-06\environments\Compute\EC2\dev\.terraform
+C:\aws_with_terraform_learning\Day-06\environments\Compute\EC2\dev\*
+Day-06/environments/Compute/EC2/dev/.terraform.lock.hcl
