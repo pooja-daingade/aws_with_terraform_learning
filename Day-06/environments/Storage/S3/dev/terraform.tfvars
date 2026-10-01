@@ -1,4 +1,5 @@
-  bucket_name = "fctp-cloud-batch-2026"
-
-  Environment = "dev"
-  bucket_tag = "dev-env-bucket"
+  bucket_name = "dev-pooja-123"
+  environment = "dev"
+  aws_region = "ap-south-1"
+  aws_s3_bucket_versioning = "Enabled"
+  aws_s3_bucket_acl = "private"
