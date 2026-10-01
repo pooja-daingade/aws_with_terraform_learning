@@ -58,3 +58,5 @@ C:\aws_with_terraform_learning\Day-06\environments\Compute\EC2\dev\.terraform
 C:\aws_with_terraform_learning\Day-06\environments\Compute\EC2\dev\*
 Day-06/environments/Compute/EC2/dev/.terraform.lock.hcl
 C:\aws_with_terraform_learning\Day-06\environments\Security\security-groups\dev\.terraform
+Day-06/environments/Security/ACM/.terraform.lock.hcl
+Day-06/environments/DNS/.terraform.lock.hcl
