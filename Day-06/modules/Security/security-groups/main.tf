@@ -23,7 +23,7 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv6" {
 
 
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
-  security_group_id =aws_security_group.tf_sg.id
+  security_group_id = aws_security_group.tf_sg.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 443
   ip_protocol       = "tcp"
@@ -52,4 +52,12 @@ resource "aws_vpc_security_group_ingress_rule" "allow_smtp_ipv4" {
   from_port         = 25
   ip_protocol       = "tcp"
   to_port           = 25
+}
+
+resource "aws_vpc_security_group_ingress_rule" "allow_pop3_ipv4" {
+  security_group_id = aws_security_group.tf_sg.id
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 110
+  ip_protocol       = "tcp"
+  to_port           = 110
 }
