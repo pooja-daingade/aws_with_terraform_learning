@@ -61,3 +61,5 @@ C:\aws_with_terraform_learning\Day-06\environments\Security\security-groups\dev\
 Day-06/environments/Security/ACM/.terraform.lock.hcl
 Day-06/environments/DNS/.terraform.lock.hcl
 VPC-Peering-2/.terraform.lock.hcl
+Day-06/environments/Network/VPC/dev/.terraform.lock.hcl
+VPC-Peering-3/.terraform.lock.hcl
