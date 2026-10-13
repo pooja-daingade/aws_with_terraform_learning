@@ -63,3 +63,8 @@ Day-06/environments/DNS/.terraform.lock.hcl
 VPC-Peering-2/.terraform.lock.hcl
 Day-06/environments/Network/VPC/dev/.terraform.lock.hcl
 VPC-Peering-3/.terraform.lock.hcl
+Day-06/environments/Compute/acm-alb/.terraform.lock.hcl
+Day-06/environments/Compute/alb/dev/.terraform.lock.hcl
+Day-06/environments/Compute/asg/dev/.terraform.lock.hcl
+Day-06/environments/Compute/lt/dev/.terraform.lock.hcl
+Day-06/environments/Compute/tg/dev/.terraform.lock.hcl
