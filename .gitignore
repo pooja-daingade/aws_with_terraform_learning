@@ -68,3 +68,6 @@ Day-06/environments/Compute/alb/dev/.terraform.lock.hcl
 Day-06/environments/Compute/asg/dev/.terraform.lock.hcl
 Day-06/environments/Compute/lt/dev/.terraform.lock.hcl
 Day-06/environments/Compute/tg/dev/.terraform.lock.hcl
+Day-06/environments/aws-vpc-endpoints-demo/endpoints-demo/.terraform.lock.hcl
+Day-06/environments/aws-vpc-endpoints-demo/network/.terraform.lock.hcl
+Day-06/modules/aws-vpc-s3-endpoints/ec2/userdata.sh
