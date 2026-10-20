@@ -75,3 +75,4 @@ Day-06/environments/Database/sql/postgracesql/dev/.terraform.lock.hcl
 Day-06/environments/Security/kms/dev/.terraform.lock.hcl
 Day-06/environments/Database/nosql/dynamodn/dev/.terraform.lock.hcl
 Day-06/environments/iam/users/developers/dave/.terraform.lock.hcl
+Day-06/environments/ec2-start-stop/.terraform.lock.hcl
