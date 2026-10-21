@@ -79,3 +79,4 @@ Day-06/environments/ec2-start-stop/.terraform.lock.hcl
 Day-06/environments/iam/groups/developers/.terraform.lock.hcl
 Day-06/environments/iam/policy/.terraform.lock.hcl
 Day-06/environments/iam/roles/.terraform.lock.hcl
+Day-06/environments/docker-ec2/.terraform.lock.hcl
